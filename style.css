@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    background-image: url("images/1115012.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: rgba( 255, 255, 255, 0.20 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.number {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.number1 {
+    transform: rotate(30deg);
+}
+.number2 {
+    transform: rotate(60deg);
+}
+.number3 {
+    transform: rotate(90deg);
+}
+.number4 {
+    transform: rotate(120deg);
+}
+.number5 {
+    transform: rotate(150deg);
+}
+.number6 {
+    transform: rotate(180deg);
+}
+.number7 {
+    transform: rotate(210deg);
+}
+.number8 {
+    transform: rotate(240deg);
+}
+.number9 {
+    transform: rotate(270deg);
+}
+.number10 {
+    transform: rotate(300deg);
+}
+.number11 {
+    transform: rotate(330deg);
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    z-index: 5;
+}
+
+.hand {
+    --rotation: 0;
+    position: absolute;
+    width: 10px;
+    height: 45%;
+    background-color: black;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 100px 100px 0 0;
+    transform: translate(-50%) rotate(calc(var(--rotation)* 1deg));
+    transform-origin: bottom;
+}
+
+.second {
+    width: 2px;
+    background-color: red;
+    z-index: 3;
+    height: 45%;
+}
+
+.minute {
+    z-index: 1;
+    height: 40%;
+    width: 8px;
+}
+
+.hour {
+    height: 20%;
+    z-index: 2;
+}
